@@ -10,9 +10,3 @@ extra_javascript:
 
 
 # Contents
-nav:
-  - '简介': 'index.md'
-
-  - '数据结构': 
-    - 'Data_Structure/index.md'
-    - 'DSU': 'Data_Structure/数据结构-1-DSU.md'
