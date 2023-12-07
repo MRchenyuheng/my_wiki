@@ -1,6 +1,3 @@
 site_name: Toasting to East
 theme:
   name: 'material'
-
-plugins:
-  - mklatex
