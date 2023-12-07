@@ -1,0 +1,24 @@
+name: Auto Update
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Run Update Script
+      run: |
+        cd team-wiki
+        mkdocs gh-deploy
+        # 在这里添加你希望运行的命令，比如
+        # npm install
+        # npm run build
+        # python script.py
+
