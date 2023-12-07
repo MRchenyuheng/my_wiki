@@ -1,24 +1,25 @@
-name: Auto Update
-
+name: ci 
 on:
   push:
     branches:
-      - main
-
+      - main # 根据实际的分支情况设置
+permissions:
+  contents: write
 jobs:
-  update:
-    runs-on: ubuntu-latest
-
+  deploy:
+    runs-on: ubuntu-latest 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Run Update Script
-      run: |
-        cd team-wiki
-        mkdocs gh-deploy
-        # 在这里添加你希望运行的命令，比如
-        # npm install
-        # npm run build
-        # python script.py
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force
 
