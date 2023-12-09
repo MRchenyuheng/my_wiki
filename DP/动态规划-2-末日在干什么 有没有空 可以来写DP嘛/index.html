@@ -1,0 +1,1210 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-1-%E6%99%AE%E9%80%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+      
+      
+        <link rel="next" href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1-DSU/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>末日在干什么 有没有空 可以来写DP吗? - Toasting to East</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Toasting to East" class="md-header__button md-logo" aria-label="Toasting to East" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Toasting to East
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              末日在干什么 有没有空 可以来写DP吗?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Toasting to East" class="md-nav__button md-logo" aria-label="Toasting to East" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Toasting to East
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第四场训练赛
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-1-%E6%99%AE%E9%80%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    末日在干什么 有没有空 可以来写DP吗?
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1-DSU/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-10-%E5%8C%BA%E5%9F%9F%E8%B5%9B%E5%89%8D%E5%9C%A8%E5%B9%B2%E4%BB%80%E4%B9%88%EF%BC%9F%E6%9C%89%E6%B2%A1%E6%9C%89%E7%A9%BA%EF%BC%9F%E5%8F%AF%E4%BB%A5%E6%9D%A5%E5%86%99%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    区域赛前在干什么？有没有空？可以来写线段树吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 2 树状数组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-3-%E5%A4%9A%E7%BB%B4%E5%81%8F%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 3 多维偏序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-4-%E7%BA%BF%E6%AE%B5%E6%A0%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 4 线段树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-5-01Trie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 5 01Trie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-6-%E7%82%B9%E5%88%86%E6%B2%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 6 点分治
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-7-ST%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 7 ST表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-8-dfs%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 8 dfs序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-9-%E8%8E%AB%E9%98%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构 9 莫队
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Graph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Graph/%E5%9B%BE%E8%AE%BA-1-Tarjan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Graph/%E5%9B%BE%E8%AE%BA-2-%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8C%B9%E9%85%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图论 2 二分图匹配
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Graph/%E5%9B%BE%E8%AE%BA-3-%E5%89%B2%E7%82%B9%E5%89%B2%E8%BE%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    割点割边
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Graph/%E5%9B%BE%E8%AE%BA-4-2-SAT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2-SAT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/%E6%95%B0%E5%AD%A6-1-%E6%99%AE%E9%80%9A%E6%95%B0%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/%E6%95%B0%E5%AD%A6-2-%E5%A4%9A%E9%A1%B9%E5%BC%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学 2 多项式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/%E6%95%B0%E5%AD%A6-3-%E7%BA%BF%E6%80%A7%E5%9F%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学 3 线性基
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    String
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            String
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../String/%E5%AD%97%E7%AC%A6%E4%B8%B2-1-%E6%9C%80%E5%B0%8F%E8%A1%A8%E7%A4%BA%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    字符串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../String/%E5%AD%97%E7%AC%A6%E4%B8%B2-2-hash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="dp">末日在干什么 有没有空 可以来写DP吗?</h1>
+<h1 id="dp_1">线性DP</h1>
+<p><a href="https://codeforces.com/contest/1613/problem/D">CF 1613 D MEX Sequences</a></p>
+<p>对于一个序列 <span class="arithmatex"><span class="MathJax_Preview">x_1, x_2, \dots, x_k</span><script type="math/tex">x_1, x_2, \dots, x_k</script></span> 是 <code>MEX-correct</code> 序列当且仅当对于所有的<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le i \le k</span><script type="math/tex">1 \le i \le k</script></span>) <span class="arithmatex"><span class="MathJax_Preview">|x_i - \operatorname{MEX}(x_1, x_2, \dots, x_i)| \le 1</span><script type="math/tex">|x_i - \operatorname{MEX}(x_1, x_2, \dots, x_i)| \le 1</script></span> 成立。给一个序列求所有满足条件子序列的个数。</p>
+<p>考虑权值。</p>
+<p>我们可以发现若一个序列是 <code>MEX-correct</code>的,设最大值为 <span class="arithmatex"><span class="MathJax_Preview">maxv</span><script type="math/tex">maxv</script></span>,必只有以下两种形态。</p>
+<ul>
+<li>从 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">maxv</span><script type="math/tex">maxv</script></span> 的数值的各个数量至少为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</li>
+<li>从 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">maxv - 2</span><script type="math/tex">maxv - 2</script></span> 和 从 <span class="arithmatex"><span class="MathJax_Preview">maxv</span><script type="math/tex">maxv</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">maxv</span><script type="math/tex">maxv</script></span> 的数值的各个数量至少为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</li>
+</ul>
+<p>简单来说就是，</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">[0, maxv]</span><script type="math/tex">[0, maxv]</script></span> 每个元素都有。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">[0, maxv - 1]</span><script type="math/tex">[0, maxv - 1]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">[maxv, maxv]</span><script type="math/tex">[maxv, maxv]</script></span>每个元素都有。</p>
+</li>
+</ul>
+<p>那么定义,到目前决策阶段 <span class="arithmatex"><span class="MathJax_Preview">i-1</span><script type="math/tex">i-1</script></span> 的状态中最大值为 <span class="arithmatex"><span class="MathJax_Preview">val</span><script type="math/tex">val</script></span> ,且满足条件 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>的数量为 <span class="arithmatex"><span class="MathJax_Preview">dp1_{val}</span><script type="math/tex">dp1_{val}</script></span>,满足条件2的为 <span class="arithmatex"><span class="MathJax_Preview">dp2_{val}</span><script type="math/tex">dp2_{val}</script></span>
+那么我们决策 i 的时候有如下转移</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">dp2_{a[i]} += dp2_{a[i]}</span><script type="math/tex">dp2_{a[i]} += dp2_{a[i]}</script></span>,第二种情况最大值可以添加。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">dp2_{a[i] + 2} += dp2_{a[i] + 2}</span><script type="math/tex">dp2_{a[i] + 2} += dp2_{a[i] + 2}</script></span>,第二种情况第二大值可以添加。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">dp2_{a[i]} += dp1_{a[i] - 2}</span><script type="math/tex">dp2_{a[i]} += dp1_{a[i] - 2}</script></span>,第二种情况由在第一种情况转化而来。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">dp1_{a[i]} += dp1_{a[i]}</span><script type="math/tex">dp1_{a[i]} += dp1_{a[i]}</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">dp1_{a[i]} += dp1_{a[i] - 1}</span><script type="math/tex">dp1_{a[i]} += dp1_{a[i] - 1}</script></span></p>
+</li>
+</ul>
+<pre><code class="language-cpp">void solve()
+{
+    cin &gt;&gt; n;
+    vector&lt;int&gt; a(n + 1);
+    rep(i,1,n) cin &gt;&gt; a[i];
+
+    vector&lt;int&gt; dp1(n + 5), dp2(n + 5);
+
+
+    dp1[0] = 1; // 向右偏移一位，这里的 0 相当于 -1
+
+    for(int i = 1;i &lt;= n;i ++)
+    {
+        a[i] ++;
+        (dp2[a[i]] += dp2[a[i]]) %= mod; 
+        (dp2[a[i] + 2] += dp2[a[i] + 2]) %= mod;
+        if(a[i] &gt;= 2)(dp2[a[i]] += dp1[a[i] - 2]) %= mod;
+        (dp1[a[i]] += dp1[a[i]]) %= mod;
+        (dp1[a[i]] += dp1[a[i] - 1]) %= mod;
+
+    }
+
+    int res = 0;
+
+    for(int i = 1;i &lt;= n + 1;i ++)
+    (res += dp1[i] + dp2[i]) %= mod;
+
+    cout &lt;&lt; res &lt;&lt; endl;
+</code></pre>
+<p><a href="https://atcoder.jp/contests/abc321/tasks/abc321_fhttps://atcoder.jp/contests/abc321/tasks/abc321_f">ABC321 F</a></p>
+<p>我们有一个盒子，最初是空的。<br />
+让我们按照输入中给出的顺序，总共执行以下两种类型的 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 操作。</p>
+<p>类型 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>：在盒子中放入一个写有整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的小球。</p>
+<p>类型 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>：从盒子中取出一个写有整数<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>的小球。  </p>
+<p>每次操作后,求从盒子中拾取一定数量的球，使写在球上的整数和为<span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>的数量。</p>
+<hr />
+<p>开一个 <span class="arithmatex"><span class="MathJax_Preview">dp</span><script type="math/tex">dp</script></span> 桶，考虑 <span class="arithmatex"><span class="MathJax_Preview">dp_{i}</span><script type="math/tex">dp_{i}</script></span> 为当前情况下构成数字 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的方案有多少个。</p>
+<p>每次修改进行 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 枚举即可。</p>
+<pre><code class="language-cpp">const int N = 5e3 + 100;
+int dp[N];
+
+int a[N];
+
+void solve()
+{
+  int q,k;
+  cin &gt;&gt; q &gt;&gt; k;
+
+  dp[0] = 1;
+
+  for(int i = 0;i &lt; q;i ++)
+  {
+    string op; int v;
+
+    cin &gt;&gt; op &gt;&gt; v;
+
+    if(op[0] == '+'){
+      for(int j = k;j &gt;= v;j --){
+        dp[j] += dp[j - v];
+        dp[j] %= mod;
+      }
+    }
+    else
+    {
+      for(int j = v;j &lt;= k;j ++){
+        dp[j] += (mod - dp[j - v]);
+        dp[j] %= mod;
+      }
+    }
+
+    cout &lt;&lt; dp[k] &lt;&lt; endl;
+  }
+}
+</code></pre>
+<h1 id="dp_2">概率DP</h1>
+<p><a href="https://hydro.ac/d/bzoj/p/3036">BZOJ #3036. 绿豆蛙的归宿</a></p>
+<p>给一个有向无环图，起点为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，终点为<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>;</p>
+<p>到达每一个顶点时，如果有 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条离开该点的道路，那么走向每条路的概率为 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{k}</span><script type="math/tex">\frac{1}{k}</script></span>。</p>
+<p>求到终点的距离期望。</p>
+<p>记 <span class="arithmatex"><span class="MathJax_Preview">f_{i}</span><script type="math/tex">f_{i}</script></span> 表示为从 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到终点 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的期望长度。</p>
+<p>考虑一条边 <span class="arithmatex"><span class="MathJax_Preview">u \rightarrow v</span><script type="math/tex">u \rightarrow v</script></span>,由于进行了拓扑排序,所以<span class="arithmatex"><span class="MathJax_Preview">dp_{v}</span><script type="math/tex">dp_{v}</script></span> 已知。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">dp_{u} = p \times ( dp_{v} +  w_{u \rightarrow v} )</span><script type="math/tex">dp_{u} = p \times ( dp_{v} +  w_{u \rightarrow v} )</script></span>, <span class="arithmatex"><span class="MathJax_Preview">p = \frac{1}{k}</span><script type="math/tex">p = \frac{1}{k}</script></span>。</p>
+<pre><code class="language-cpp">void topsort()
+{
+    queue&lt;int&gt; q;
+    q.push(n);
+
+    while(q.size())
+    {
+        int u = q.front(); q.pop();
+        //int sz = g[u].size();
+
+        for(auto t : g[u])
+        {
+            int v = t.first; int len = t.second;
+            d[v] += 1.0 / sz[v] * (len + d[u]);
+            din[v] --;
+            if(din[v] == 0) q.push(v);
+        }
+    }
+
+}
+
+
+void solve()
+{
+
+    cin &gt;&gt; n &gt;&gt; m;
+    for(int i = 1;i &lt;= m; i ++)
+    {
+        int u,v,c;
+        cin &gt;&gt; u &gt;&gt; v &gt;&gt; c;
+
+        din[u] ++; sz[u] ++;
+        g[v].push_back(PII(u,c));
+    }
+
+    topsort();
+
+    cout &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt;  d[1] &lt;&lt; endl;
+
+}
+</code></pre>
+<p>思考参考:<a href="https://www.zhihu.com/question/464263211">为什么通常期望dp要倒推？</a></p>
+<h1 id="dp_3">DP与二进制</h1>
+<p><a href="https://codeforces.com/contest/1635/problem/D">CF 1635 D. Infinite Set</a></p>
+<p>给<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个数<span class="arithmatex"><span class="MathJax_Preview">a_{n}</span><script type="math/tex">a_{n}</script></span>，一个大小限制<span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>
+可以进行任意次数的操作，每次操作选定集合里一个<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>
+将<span class="arithmatex"><span class="MathJax_Preview">2 \times x + 1</span><script type="math/tex">2 \times x + 1</script></span>或者<span class="arithmatex"><span class="MathJax_Preview">4 \times x</span><script type="math/tex">4 \times x</script></span>加入到集合中
+问该集合中小于<span class="arithmatex"><span class="MathJax_Preview">2^{p}</span><script type="math/tex">2^{p}</script></span>的数有几个</p>
+<p>将<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>看成二进制。
+第一个操作便是将<code>x &lt;&lt; 1 | 1</code>加到集合中。看成在某个数的二进制表示后面加一个<code>1</code>。
+第二个操作便是将<code>x &lt;&lt; 2</code>加到集合中。看成在某个数的二进制表示后面加两个<code>0</code>。</p>
+<p>我们可以发现一个性质，根据奇偶性，一个数要么由操作<code>1</code>变过来，要么由操作<code>2</code>变过来。</p>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">f_{i}</span><script type="math/tex">f_{i}</script></span>代表原二进制串左移<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>个单位能得到的所有的不同二进制串的个数
+设<span class="arithmatex"><span class="MathJax_Preview">dp_{i}</span><script type="math/tex">dp_{i}</script></span>代表原二进制串左移<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>个单位能得到的不同二进制串的个数</p>
+<p>可知<span class="arithmatex"><span class="MathJax_Preview">dp_{i} = dp_{i-1} + dp_{i-2}</span><script type="math/tex">dp_{i} = dp_{i-1} + dp_{i-2}</script></span>也就是通过前两种方法得到转移
+而<span class="arithmatex"><span class="MathJax_Preview">f_{i}</span><script type="math/tex">f_{i}</script></span>也就是<span class="arithmatex"><span class="MathJax_Preview">dp_{i}</span><script type="math/tex">dp_{i}</script></span>的前缀和</p>
+<p>对于某个长度为<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>的数<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>
+他可以形成长度为<span class="arithmatex"><span class="MathJax_Preview">l + 1</span><script type="math/tex">l + 1</script></span>的数的种数为<code>1</code>种。即法一。
+他可以形成长度为<span class="arithmatex"><span class="MathJax_Preview">l + 2</span><script type="math/tex">l + 2</script></span>的数的种数为<code>2</code>种。即两步法一和一步法二。</p>
+<pre><code class="language-cpp">
+const int N = 2e5 + 100;
+const int mod = 1e9 + 7;
+
+int f[N];
+int sum[N];
+int a[N];
+map&lt;int,bool&gt; mp;
+
+int n,p;
+
+void init()
+{
+  f[0] = f[1] = 1;
+  sum[0] = 1;
+  sum[1] = 2;
+  for(int i = 2;i &lt;= 2e5 + 10;i ++){
+    f[i] = (f[i - 1] + f[i - 2])%mod;
+    sum[i] = (sum[i - 1] + f[i])%mod;
+  }
+}
+
+bool check(int x)
+{
+   while(x)
+   {
+     if(x % 2 == 1) x &gt;&gt;= 1;
+     else if(x % 4 == 0)x &gt;&gt;= 2;
+     else break;
+
+     if(mp.count(x)) return false;
+   }
+
+   return true;
+}
+
+int bit(int x)
+{
+  int res = 0;
+  while(x) x &gt;&gt;= 1, res ++;
+  return res;
+}
+
+void solve()
+{
+   init();
+   cin &gt;&gt; n &gt;&gt; p;
+   int res = 0;
+
+   for(int i = 1;i &lt;= n;i ++) cin &gt;&gt; a[i];
+   for(int i = 1;i &lt;= n;i ++) mp[a[i]] = true;
+
+   for(int i = 1;i &lt;= n;i ++)
+   if(check(a[i])){
+    int len = bit(a[i]);
+    if(p - len &gt;= 0) (res += sum[p - len]) %= mod;
+   }
+
+   cout &lt;&lt; res &lt;&lt; endl;
+
+}
+</code></pre>
+<p>upd:20231023</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
