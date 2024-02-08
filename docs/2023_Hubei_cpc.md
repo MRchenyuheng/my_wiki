@@ -1,4 +1,4 @@
-# 2023 Hubei Provincial Collegiate Programming Contest VP 总结
+# 2023 Hubei Provincial Collegiate Programming Contest VP
 
 https://codeforces.com/gym/104337
 
@@ -14,11 +14,11 @@ rank 15/170 金
 
 
 
-![2023_hubei_board](my_wiki/docs/img/2023_hubei_board.png)
+![2023_hubei_board](img/2023_hubei_board.png)
 
 
 
-![2023_hubei_vpboard](my_wiki/docs/img/2023_hubei_vpboard.png)
+![2023_hubei_vpboard](img/2023_hubei_vpboard.png)
 
 
 正片开始。
