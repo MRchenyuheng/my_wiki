@@ -1,14 +1,18 @@
-# 2023 Hubei Provincial Collegiate Programming Contest VP
-
-https://codeforces.com/gym/104337
+# 2023 Hubei Provincial Collegiate Programming Contest 
 
 
 
-rank 15/170 金
+[比赛链接qwq](https://codeforces.com/gym/104337)
 
-7题，罚时840。
+
+
+**Rank 15/170**  **金**  **7题 罚时840** 
+
+
 
 但是就经验而言，现场和`VP`，在发挥程度上，会相差一到两个题目。
+
+
 
 所以这场如果是打现场赛的话，大概率是银中到银顶的水平。
 
