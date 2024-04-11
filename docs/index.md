@@ -17,11 +17,11 @@ $$f_{x} = \displaystyle \sum_{i = 0}^{n} \frac { f_{x_{0}}^{{(i)}} { {(x - x_{0}
 
 ## 基本积分公式
 
-$$\begin{flalign*} & \int \frac{1}{x} dx = ln|x| + C & \end{flalign*}$$
+$$\int \frac{1}{x} dx = ln|x| + C$$
 
-$$\begin{flalign*} & \int {a}^{x} dx = \frac{a^{x}}{lna} + C \end{flalign*}$$
+$$\int {a}^{x} dx = \frac{a^{x}}{lna} + C$$
 
-$$\begin{flalign*} & \int \tan x \,dx = - \ln|\cos x| + C \end{flalign*}$$
+$$\int \tan x \,dx = - \ln|\cos x| + C$$
 
 $$\int \frac{1}{\tan x} \, dx = \int \cot x \, dx = \ln|\sin x| + C$$
 
@@ -29,11 +29,11 @@ $$\int \frac{dx}{\cos x} dx = \int \sec x \, dx = \ln |\sec x + \tan x|$$
 
 $$\int \frac{dx}{\sin x} \, dx = \int \csc x \, dx = \ln|\csc x - \cot x| + C$$
 
-$$\int \sec^{2} x \, dx = \tan x + C$$​
+$$\int \sec^{2} x \, dx = \tan x + C$$
 
 ## 基本积分公式 2
 
-$$\int \csc^{2} x \, dx = - \cot x + C$$​
+$$\int \csc^{2} x \, dx = - \cot x + C$$
 
 $$\int \sec x \, \tan x \,dx = \sec x + C$$
 
@@ -43,9 +43,9 @@ $$\int \frac{1}{a^2 + x^2 } = \frac{1}{a} \arctan \frac{x}{a} + C$$
 
 $$\int \frac{1}{\sqrt{a^2 - x^2} } dx = \arcsin \frac{x}{a} + C$$
 
-$$\int \frac{1}{ \sqrt{x^2 + a^2}} dx = \ln(x + \sqrt{x^2 + a^2}) + C$$​
+$$\int \frac{1}{ \sqrt{x^2 + a^2}} dx = \ln(x + \sqrt{x^2 + a^2}) + C$$
 
-$$\int \frac{1}{ \sqrt{x^2 - a^2}} dx = \ln|x + \sqrt{x^2 - a^2}| + C$$​
+$$\int \frac{1}{ \sqrt{x^2 - a^2}} dx = \ln|x + \sqrt{x^2 - a^2}| + C$$
 
 $$\int \frac{1}{x^2 - a^2} \, dx = \frac{1}{2a} \ln | \frac{x + a}{x - a}| + C$$
 
