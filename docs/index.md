@@ -29,7 +29,9 @@ $$\int \frac{dx}{\cos x} dx = \int \sec x \, dx = \ln |\sec x + \tan x|$$
 
 $$\int \frac{dx}{\sin x} \, dx = \int \csc x \, dx = \ln|\csc x - \cot x| + C$$
 
-$$\int \sec^{2} x \, dx = \tan x + C$$
+$$\int \sec^{2} x \, dx = \tan x + C$$​
+
+## 基本积分公式 2
 
 $$\int \csc^{2} x \, dx = - \cot x + C$$​
 
