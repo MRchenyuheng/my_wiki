@@ -17,11 +17,11 @@ $$f_{x} = \displaystyle \sum_{i = 0}^{n} \frac { f_{x_{0}}^{{(i)}} { {(x - x_{0}
 
 ## 基本积分公式
 
-$$\int \frac{1}{x} dx = ln|x| + C$$
+$$\begin{flalign*} & \int \frac{1}{x} dx = ln|x| + C & \end{flalign*}$$
 
-$$\int {a}^{x} dx = \frac{a^{x}}{lna} + C$$
+$$\begin{flalign*} & \int {a}^{x} dx = \frac{a^{x}}{lna} + C \end{flalign*}$$
 
-$$\int \tan x \,dx = - \ln|\cos x| + C$$
+$$\begin{flalign*} & \int \tan x \,dx = - \ln|\cos x| + C \end{flalign*}$$
 
 $$\int \frac{1}{\tan x} \, dx = \int \cot x \, dx = \ln|\sin x| + C$$
 
@@ -54,4 +54,8 @@ $$\int \sqrt{a^2 - x ^ 2} dx = \frac{a^2}{2} \arcsin \frac{x}{a} + \frac{x}{2} \
 $$\int \tan^2 x \, dx = \tan x - x + C$$
 
 $$\cot^2 x \, dx = - \cot x - x + C$$
+
+
+
+
 
