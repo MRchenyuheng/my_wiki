@@ -6,7 +6,7 @@
 >
 >  本文件尊崇，开源开放共享精神
 
-<img src="/Users/apple/Desktop/卡哇伊/111/124140926_p0.png" alt="124140926_p0" width= "50%" hight = "50%" />
+<img src="/img/截图/截屏2024-11-18 20.29.29.png" alt="124140926_p0" width= "50%" hight = "50%" />
 
 ## 更新日志
 
